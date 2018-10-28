@@ -5,10 +5,28 @@
     xmlns:local="using:GlazerCalcUWP_Lao"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    mc:Ignorable="d" Background="#FF091842">
 
-    <Grid>
-
+    <Grid x:Name="dateBox">
+        <TextBlock HorizontalAlignment="Center" Margin="0,23,0,0" Text="Glazer Calculator" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Segoe UI" FontSize="48" RequestedTheme="Default"/>
+        <TextBlock HorizontalAlignment="Left" Margin="456,145,0,0" Text="Width:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="452,198,0,0" Text="Height:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox x:Name="widthText" HorizontalAlignment="Left" Margin="522,139,0,0" Text="" VerticalAlignment="Top" InputScope="Number" AcceptsReturn="True" MaxWidth="64" MaxHeight="32" KeyUp="widthText_KeyUp"/>
+        <TextBox x:Name="heightText" HorizontalAlignment="Left" Margin="522,192,0,0" Text="" VerticalAlignment="Top" InputScope="Number" AcceptsReturn="True" MaxWidth="64" MaxHeight="32" KeyUp="heightText_KeyUp"/>
+        <TextBlock HorizontalAlignment="Left" Margin="471,252,0,0" Text="Tint:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <ComboBox HorizontalAlignment="Left" Margin="522,247,0,0" VerticalAlignment="Top" Width="192">
+            <ComboBoxItem Background="#FF1B0303" Content="Black" FocusVisualPrimaryBrush="#FF060000"/>
+            <ComboBoxItem Background="#FF40240E" Content="Brown"/>
+            <ComboBoxItem Background="#FF2850DA" Content="Blue"/>
+        </ComboBox>
+        <TextBlock HorizontalAlignment="Left" Margin="391,471,0,0" Text="Length of wood:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="411,522,0,0" Text="Area of glass:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="439,330,0,0" Text="Quantity:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock x:Name="quantityBox" HorizontalAlignment="Left" Margin="699,328,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Visibility="Visible"/>
+        <TextBox x:Name="woodLengthView" HorizontalAlignment="Left" Margin="522,465,0,0" Text="" VerticalAlignment="Top" IsReadOnly="True" RenderTransformOrigin="0.531,0.9" Width="207"/>
+        <Button x:Name="calcButton" Content="Calculate" HorizontalAlignment="Left" Margin="538,393,0,0" VerticalAlignment="Top" Width="132" Click="calcButton_Click"/>
+        <TextBox x:Name="glassAreaView" HorizontalAlignment="Left" Margin="522,516,0,0" Text="" VerticalAlignment="Top" IsReadOnly="True" RenderTransformOrigin="0.531,0.9" Width="207"/>
+        <TextBlock x:Name="dateBlock" HorizontalAlignment="Left" Margin="522,572,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Visibility="Visible"/>
+        <Slider x:Name="quantitySlider" HorizontalAlignment="Left" Margin="527,322,0,0" VerticalAlignment="Top" Width="137" Height="32" ValueChanged="quantitySlider_ValueChanged"/>
     </Grid>
 </Page>
